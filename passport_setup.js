@@ -26,10 +26,10 @@ module.exports = function(passport) {
     new LocalStrategy(
       {
         usernameField: 'email',
-        passportField: 'password',
+        passwordField: 'password',
         passReqToCallback: true
       },
-      function(email, password, done) {
+      function(req, email, password, done) {
         return models.User.findOne({
           where: {
             email: email

@@ -14,21 +14,21 @@ html(lang='en')
               .row
                 .col-sm-12.col-md-12
                   form(action="/signup", method="POST")
-                    .formgroup
+                    div.formgroup
                       label.small.mb-1.mt-3 Email:
                       input(placeholder="Please enter your email",
-                            required,
+                            required=true,
                             name='email',
                             type='email',
                             value='').form-control
                       label.small.mb-1.mt-3 Password:
                       input(placeholder="New Password",
-                            required,
+                            required=true,
                             name='password',
                             type="password",
                             value='').form-control
                       button.mt-3.btn.btn-primary(type="submit") Sign up
                       p.mt-2.mb-0
-                        | Already have an account? #[a(href="/login") Log in here]
+                        | Already have an account? #[a(href="/login") Log in here].
     include ../common/footer.pug
     +footer()
